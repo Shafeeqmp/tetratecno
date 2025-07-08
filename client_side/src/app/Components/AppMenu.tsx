@@ -35,25 +35,25 @@ export function HeroSection() {
 
   const developers = [
     {
-      name: "Muhammed Shafeeq",
+      name: "Muhd_Shahid",
       role: "Frontend Developer",
       expertise: "React, TypeScript",
       photo: "/images/team/shahid.jpg",
     },
     {
-      name: "Muhammed Shahid",
+      name: "Muhd_Fauzan",
       role: "Backend Developer",
       expertise: "Node.js, JavaScript",
-      photo: "/images/team/fauzan.jpg",
+      photo: "/images/team/Fauzan.jpg",
     },
     {
-      name: "Shibili",
+      name: "Muhd_Shafeeq",
       role: "UX Designer",
       expertise: "Figma, UI/UX",
       photo: "/images/team/shafeeq.jpg",
     },
     {
-      name: "Fauzan",
+      name: "Muhd_Shibili",
       role: "DevOps Engineer",
       expertise: "AWS, Docker",
       photo: "/images/team/shibili.jpg",
