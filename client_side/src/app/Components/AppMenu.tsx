@@ -10,7 +10,7 @@ import {
   FaStar,
   FaLinkedin,
   FaGithub,
-  FaTwitter,
+  FaInstagram
 } from "react-icons/fa";
 
 export function HeroSection() {
@@ -39,24 +39,44 @@ export function HeroSection() {
       role: "Frontend Developer",
       expertise: "React, TypeScript",
       photo: "/images/team/shahid.jpg",
+      social: {
+        linkedin: "#",
+        github: "https://github.com/Codethemind",
+        instagram: "https://twitter.com/muhd_shahid",
+      },
     },
     {
       name: "Muhd_Fauzan",
       role: "Backend Developer",
       expertise: "Node.js, JavaScript",
       photo: "/images/team/Fauzan.jpg",
+      social: {
+        linkedin: "https://www.linkedin.com/in/muhd-fauzan",
+        github: "https://github.com/muhd-fauzan",
+        instagram: "https://twitter.com/muhd_fauzan",
+      },
     },
     {
       name: "Muhd_Shafeeq",
       role: "UX Designer",
       expertise: "Figma, UI/UX",
       photo: "/images/team/shafeeq.jpg",
+      social: {
+        linkedin: "https://www.linkedin.com/in/muhammed-shafeeq-254056234/",
+        github: "https://github.com/Shafeeqmp",
+        instagram: "https://twitter.com/muhd_shafeeq",
+      },
     },
     {
       name: "Muhd_Shibili",
       role: "DevOps Engineer",
       expertise: "AWS, Docker",
       photo: "/images/team/shibili.jpg",
+      social: {
+        linkedin: "https://www.linkedin.com/in/muhd-shibili",
+        github: "https://github.com/Muhd-Shibili77",
+        instagram: "https://twitter.com/muhd_shibili",
+      },
     },
   ];
 
@@ -419,105 +439,122 @@ export function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Developer Team Section - Mobile Optimized */}
+      {/* Developer Team Section with Social Links */}
       <div className="py-16 sm:py-24 px-4 bg-gradient-to-b from-gray-950 to-black text-white">
-  <div className="max-w-7xl mx-auto">
-    
-    {/* Section Heading */}
-    <motion.div
-      className="text-center mb-12 sm:mb-16"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-    >
-      <motion.h2
-        className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
-      >
-        Meet Our Team
-      </motion.h2>
-      <motion.p
-        className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-      >
-        The brilliant minds powering digital transformation
-      </motion.p>
-    </motion.div>
-
-    {/* Responsive Grid - Same for all screens */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-      {developers.map((dev, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: index * 0.1 }}
-          viewport={{ once: true }}
-          className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:border-purple-500/30 transition-all"
-        >
-          {/* Profile Image */}
-          <div className="relative mb-4 rounded-lg overflow-hidden aspect-square w-full">
-            <img
-              src={dev.photo}
-              alt={dev.name}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-          </div>
+        <div className="max-w-7xl mx-auto">
           
-          {/* Content */}
-          <div className="space-y-2">
-            <h3 className="text-lg font-semibold">{dev.name}</h3>
-            <p className="text-blue-400 text-sm">{dev.role}</p>
-            <div className="flex flex-wrap gap-1.5 mt-2">
-              {dev.expertise.split(", ").map((skill, i) => (
-                <span key={i} className="text-xs bg-white/5 px-2 py-1 rounded-full">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-          
-          {/* Social Links - Only show on hover for desktop */}
-          <div className="flex gap-2 mt-4 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
-            <button className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
-              <FaLinkedin className="w-3.5 h-3.5" />
-            </button>
-            <button className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
-              <FaGithub className="w-3.5 h-3.5" />
-            </button>
-            <button className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
-              <FaTwitter className="w-3.5 h-3.5" />
-            </button>
-          </div>
-        </motion.div>
-      ))}
-    </div>
+          {/* Section Heading */}
+          <motion.div
+            className="text-center mb-12 sm:mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <motion.h2
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
+            >
+              Meet Our Team
+            </motion.h2>
+            <motion.p
+              className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              The brilliant minds powering digital transformation
+            </motion.p>
+          </motion.div>
 
-    {/* CTA Button */}
-    <motion.div
-      className="text-center"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.4 }}
-      viewport={{ once: true }}
-    >
-      <motion.button
-        whileHover={{ scale: 1.03 }}
-        whileTap={{ scale: 0.97 }}
-        className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium shadow-md hover:shadow-lg transition-all"
-      >
-        <span className="flex items-center gap-2">
-          View Full Team
-          <FaArrowRight />
-        </span>
-      </motion.button>
-    </motion.div>
+          {/* Team Members Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {developers.map((dev, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group bg-gray-900/50 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:border-purple-500/30 transition-all"
+              >
+                {/* Profile Image */}
+                <div className="relative mb-4 rounded-lg overflow-hidden aspect-square w-full">
+                  <img
+                    src={dev.photo}
+                    alt={dev.name}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                </div>
+                
+                {/* Content */}
+                <div className="space-y-2">
+                  <h3 className="text-lg font-semibold">{dev.name}</h3>
+                  <p className="text-blue-400 text-sm">{dev.role}</p>
+                  <div className="flex flex-wrap gap-1.5 mt-2">
+                    {dev.expertise.split(", ").map((skill, i) => (
+                      <span key={i} className="text-xs bg-white/5 px-2 py-1 rounded-full">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Social Links */}
+                <div className="flex gap-2 mt-4 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
+                  <a 
+                    href={dev.social.linkedin} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
+                    aria-label={`${dev.name} LinkedIn`}
+                  >
+                    <FaLinkedin className="hover:text-blue-600" />
+                  </a>
+                  <a 
+                    href={dev.social.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
+                    aria-label={`${dev.name} GitHub`}
+                  >
+                    <FaGithub className="w-3.5 h-3.5" />
+                  </a>
+                  <a 
+                    href={dev.social.instagram} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
+                    aria-label={`${dev.name} Instagram`}
+                  >
+                    <FaInstagram className="hover:text-pink-500" />
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
 
-  </div>
-</div>
+          {/* CTA Button */}
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium shadow-md hover:shadow-lg transition-all"
+            >
+              <span className="flex items-center gap-2">
+                View Full Team
+                <FaArrowRight />
+              </span>
+            </motion.button>
+          </motion.div>
+        </div>
+      </div>
     </div>
   );
 }
